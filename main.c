@@ -1,13 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    float num;
-    scanf("%f", &num);
-    if(num-(int)num==0)
-        printf("integer");
+    long long A, B, C, D;
+    scanf("%lld %lld %lld %lld", &A, &B, &C, &D);
+
+    if ((A - B == 1 && B - D == 2 && A - C == 2) || (B - A == 1 && D - B == 2 && C - A == 2))
+    {
+        printf("yes\n");
+    }
     else
-        printf("float");
+    {
+        printf("no\n");
+    }
+
     return 0;
 }
